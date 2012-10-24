@@ -2,6 +2,14 @@
 
 // DataTables, HQ Tables & Export Data Tables styling
 
+.sideways-header() {
+    transform-origin: 0 0;
+    -webkit-writing-mode:vertical-rl;
+    -moz-writing-mode:vertical-rl;
+    writing-mode:vertical-rl;
+    .rotate(180deg);
+}
+
 .datatable {
     margin-bottom: 1px;
 }
@@ -29,11 +37,7 @@
 }
 
 .datatable thead th .sideways {
-    transform-origin: 0 0;
-    -webkit-writing-mode:vertical-rl;
-    -moz-writing-mode:vertical-rl;
-    writing-mode:vertical-rl;
-    .rotate(180deg);
+    .sideways-header();
     height:200px;
     width:50px;
 }
@@ -163,7 +167,7 @@
         margin-top: -197px;
     }
     tbody th {
-         width: 12%;
+        width: 9%;
     }
     td.summary {
         background-color: @tdSummary;
@@ -177,12 +181,22 @@
     tr:nth-child(odd) td.current_month {
         background-color: darken(@tdCurrentMonth, 5);
     }
-    th.summary {
+
+    tbody th.category_title {
+        width: 3%;
+        color: @white;
+        #gradient > .vertical(desaturate(lighten(@blue, 20), 60), desaturate(darken(@blue, 5), 20));
+    }
+    tbody th.category_title div {
+        .sideways-header();
+        font-size: 2.1em;
+        line-height: 1.1em;
+    }
+
+    thead th.summary {
         #gradient > .vertical(darken(@thSummary, 10), darken(@thSummary, 30));
     }
-    th.current_month {
+    thead th.current_month {
         #gradient > .vertical(darken(@thCurrentMonth, 10), darken(@thCurrentMonth, 30));
     }
-
-
 }
