@@ -44,7 +44,7 @@
 
     // push to event loop to allow forms to submit
     setTimeout(function () {
-      state == 'loadingText' ?
+      state == ((state == 'loadingText') || (state =='standardText')) ?
         $el.addClass(d).attr(d, d) :
         $el.removeClass(d).removeAttr(d)
     }, 0)
