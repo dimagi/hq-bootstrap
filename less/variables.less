@@ -10,22 +10,24 @@
 // Grays
 // -------------------------
 @black:                 #000;
-@grayDarker:            #222;
+@grayDarker:            #2C2C2C; // hq
 @grayDark:              #333;
 @gray:                  #555;
 @grayLight:             #999;
 @grayLighter:           #eee;
 @white:                 #fff;
 
+@commCareGray:          #6C6C6C;  // hq
+
 
 // Accent colors
 // -------------------------
-@blue:                  #049cdb;
-@blueDark:              #0064cd;
+@blue:                  #1557A2; // hq
+@blueDark:              #4A607D; // hq
 @green:                 #46a546;
 @red:                   #9d261d;
 @yellow:                #ffc40d;
-@orange:                #f89406;
+@orange:                #FF8B03; // hq
 @pink:                  #c3325f;
 @purple:                #7a43b6;
 
@@ -38,7 +40,7 @@
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             #1557A2; // hq
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -48,9 +50,9 @@
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
-@baseFontSize:          14px;
+@baseFontSize:          13px; // hq
 @baseFontFamily:        @sansFontFamily;
-@baseLineHeight:        20px;
+@baseLineHeight:        18px; // hq
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
@@ -180,16 +182,16 @@
 @navbarCollapseWidth:             979px;
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
-@navbarHeight:                    40px;
-@navbarBackgroundHighlight:       #ffffff;
-@navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
+@navbarHeight:                    60px;  // hq
+@navbarBackgroundHighlight:       #FDFDFD; // hq
+@navbarBackground:                #F4F4F4; // hq
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
-@navbarText:                      #777;
-@navbarLinkColor:                 #777;
-@navbarLinkColorHover:            @grayDark;
+@navbarText:                      @commCareGray; // hq
+@navbarLinkColor:                 @commCareGray; // hq
+@navbarLinkColorHover:            @blue;  // hq
 @navbarLinkColorActive:           @gray;
-@navbarLinkBackgroundHover:       transparent;
+@navbarLinkBackgroundHover:       lighten(mix(@navbarLinkColorActive, @blue, 80), 60); // hq
 @navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
 
 @navbarBrandColor:                @navbarLinkColor;
@@ -289,8 +291,8 @@
 
 // Fluid grid
 // -------------------------
-@fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
-@fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+@fluidGridColumnWidth:    6.382978723%;  // hq 
+@fluidGridGutterWidth:    2.127659574%;  // hq
 
 // 1200px min
 @fluidGridColumnWidth1200:     percentage(@gridColumnWidth1200/@gridRowWidth1200);
